@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico">
+  <title>
+    custom-element-demo
+  </title>
+  <style>
+    .container{
+      max-width:512px;
+      margin: 0 auto;
+    }
+
+    .demobox{
+      border:5px solid #c2c2c2;
+      padding:5px;
+      margin:10px;
+
+    }
+
+    .bigPinkPtag{
+      color: pink;
+      border: 10px solid pink;
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: black;
+    }
+    .title{
+      color: #646464;
+      font-weight: normal;
+      font-size: 1.3rem;
+      margin-top:20px
+    }
+    .notcomp{
+      box-sizing: border-box;
+      margin: 10px;
+      padding:10px;
+      background-color: #ccc;;
+      border: 1px solid #212121;
+      border-left: 10px solid #212121;
+    }
+    .notcomp pre{
+      padding:10px;
+      background-color: #fff;
+      color: #212121;
+      white-space: pre-wrap; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+<h1  class="title">Slideshow</h1>
+    <div class="demobox">
+      <imdt-slideshow-native slide="0" autoplay>
+        <div class="slide textslide">
+            <h1>Slide 1</h1>
+            <p>This is the first slide.</p>
+             <p>The best bit about using this sort of web component is you can mix and match and embed them inside each other
+             you can - for example put a zoomable image or accordion inside this slideshow very very easily</p>
+            <button>Tabbable thingy</button>
+            </div>
+    
+            <div class="slide imageslide">
+            <h1>Slide 2</h1>
+            <img src="../iain.jpg" alt="An image for slide 2">
+            </div>
+    
+            <div class="slide">
+              <h1>Slide 3</h1>
+              <p>This is the first slide.</p>
+               <p>The best bit about using this sort of web component is you can mix and match and embed them inside each other
+               you can - for example put a zoomable image or accordion inside this slideshow very very easily</p>
+              <button>Tabbable thingy</button>
+            </div>
+    </imdt-slideshow-native>
+    </div>
+
+ 
+
+
+
+
+
+
+
+
+
+  <script type="module" src="SlideShow.js"></script>
+</body>
+
+</html>
