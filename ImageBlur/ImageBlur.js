@@ -20,14 +20,14 @@ export default class ImageBlur extends HTMLElement {
         const style = document.createElement('style');
         style.textContent = `
         .imgHolder{
-               border: 5px solid var(--accent2);
+               border: 5px solid var(--accent2, #000);
                overflow:hidden;
                background-color:${this.bgColor} ;
          }
          
          .imgHolder:hover,    
          .imgHolder:focus-within{
-               border: 5px solid var(--accent1);
+               border: 5px solid var(--accent1, #000);
             }
           img{
             cursor: pointer;
@@ -37,14 +37,12 @@ export default class ImageBlur extends HTMLElement {
             filter: blur(${this.blurLevel});
           }
             .message{
-            background-color:var(--accent2);
+            background-color:var(--accent2, #000);
             color:#fff;
             padding:10px;
             margin:0px}
         `;
         this.shadowRoot.append(style);
-
-
         // Create the image
         this._image = document.createElement('img');
         this._image.className = "blurImage";
@@ -97,4 +95,5 @@ export default class ImageBlur extends HTMLElement {
     }
     
     customElements.define('imdt-image-blur', ImageBlur);
+  
     
