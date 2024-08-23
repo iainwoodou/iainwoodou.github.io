@@ -6,7 +6,14 @@
   <title>Custom Textarea</title>
 </head>
 <body>
-  <my-textarea charlimit="255" resize wordcount>The value for my textarea here</my-textarea>
+  <my-textarea maxlength="255" resize wordcount>The value for my textarea here</my-textarea>
+
+  <script>
+    document.querySelector("my-textarea").addEventListener('limit-hit', (event) => {
+        alert("NO MORE TYPING FOR YOU")
+        console.log('Current text:', event.detail);
+      });
+  </script>
   <script src="my-textarea.js"></script>
 </body>
 </html>
