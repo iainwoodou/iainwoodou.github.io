@@ -1,0 +1,8 @@
+/* importing in  CSS (Recommended) */
+@import url('@ou-imdt/css');
+
+/* importing themes via js (optional addition) */
+@import url('@ou-imdt/css/dist/themes/brand.css');
+
+/* importing datavis palette vis js (optional addition) */
+@import url('@ou-imdt/css/dist/datavis-palette.css');

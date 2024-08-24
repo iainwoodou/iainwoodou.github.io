@@ -1,0 +1,34 @@
+{
+  "name": "imdt-sortable-list",
+  "version": "1.0.0",
+  "description": "A Sortable comonent",
+  "author": {
+    "name": "iainwoodou",
+    "email": "iain.wood@open.ac.uk"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000 --open --mode development",
+    "start": "npm run dev",
+    "build": "vite build --mode production",
+    "postbuild": "npm run zip",
+    "preview": "vite preview --port 8080 --open",
+    "zip": "mkdirp ./release && vite build && cd ./dist && bestzip ../release/imdt-sortable-list.zip *",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "npm run prettier:fix && npm run lint:fix"
+  },
+  "dependencies": {
+    "@ou-imdt/css": "^2.3.3",
+    "@ou-imdt/utils": "^0.0.5",
+    "lit": "^3.2.0"
+  },
+  "devDependencies": {
+    "bestzip": "^2.2.1",
+    "eslint": "^9.1.1",
+    "eslint-config-prettier": "^9.1.0",
+    "mkdirp": "^3.0.1",
+    "prettier": "^3.2.5",
+    "vite": "^5.2.10"
+  }
+}

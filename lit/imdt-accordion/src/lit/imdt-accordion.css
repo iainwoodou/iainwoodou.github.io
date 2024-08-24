@@ -1,0 +1,62 @@
+.accordion-container {
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  padding: 0px;
+  border-radius: 10px;
+  margin:10px
+}
+
+
+.header {
+  cursor: pointer;
+  padding: 3px 15px;
+  background: var(--core1, #003904);
+  color: #ffffff;
+  border: 0px;
+  width: 100%;
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: normal;
+  line-height: 1.6;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom:1px solid #fff;
+}
+
+.header:hover,
+.header:focus {
+  background: var(--accent2, #8c21b0);
+  color: #ffffff;
+}
+
+.header .arrow {
+  font-weight: normal;
+  transition: transform 0.3s ease;
+  font-size: 2em;
+}
+
+.header[aria-expanded='true'] .arrow {
+  transform: rotate(180deg);
+}
+
+.content {
+  background: var(--content-bg, #f9f9f9);
+  opacity: 1;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.05s ease-out;
+  max-height: 0;
+  padding: 10px;
+}
+
+.content.opening {
+  display: block;
+  max-height: auto;
+}
+
+.content.closing {
+  transition: max-height 0.3s ease-out;
+}

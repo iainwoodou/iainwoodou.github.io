@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>imdt-sortable-list</title>
+  </head>
+
+  <body>
+    <sortable-list id="list1"></sortable-list>
+    <script src="/vleapi.1.js"></script>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      document.querySelector('#list1').items = [
+        { label: 'Item label',
+           children: [
+            { label: 'Item 1' },
+            { label: 'Item 2' },
+            { label: 'Item 3' },
+            { label: 'Item 4' }
+        ] },
+        { label: 'Item 2' },
+        { label: 'Item 3' },
+      ]
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico">
+  <title>
+    imdt-slideshow
+  </title>
+  <style>
+    .demo{
+      max-width: 700px;
+      border:2px solid #efefef;
+      padding: 10px;
+      margin: 0 auto;
+    }
+    .slide{
+      padding: 20px;
+    }
+    .slide img{
+      max-width: 100%;   ;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="demo">
+  <imdt-slideshow slide="0" autoplay>
+    <div class="slide textslide">
+        <h1>Slide 1</h1>
+        <p>This is the first slide.</p>
+         <p>
+          </p>
+        <button>Tabbable thingy</button>
+        </div>
+
+        <div class="slide imageslide">
+        <h1>Slide 2</h1>
+        <img src="image.jpg" alt="An image for slide 2">
+        </div>
+
+        <div class="slide">
+          <h1>Slide 3</h1>
+          <p>This is the first slide.</p>
+           <p>The best bit about using this sort of web component is you can mix and match and embed them inside each other
+           you can - for example put a zoomable image or accordion inside this slideshow very very easily</p>
+          <button>Tabbable thingy</button>
+        </div>
+</imdt-slideshow>
+</div>
+  <script src="/vleapi.1.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
