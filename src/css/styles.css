@@ -1,0 +1,49 @@
+/* importing in  CSS (Recommended) */
+@import url('@ou-imdt/css');
+
+/* importing themes via js (optional addition) */
+@import url('@ou-imdt/css/dist/themes/brand.css');
+
+/* importing datavis palette vis js (optional addition) */
+@import url('@ou-imdt/css/dist/datavis-palette.css');
+
+/* importing icons via js (optional addition)- Uncomment when icons are required */
+/* @import url('imd-icons'); */
+/* @import url('imd-icons/icons/css/all.css'); */
+@import url('@awesome.me/kit-4b5ffe0e68');
+@import url('@awesome.me/kit-4b5ffe0e68/icons/css/all.css');
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: lefy;
+  }
+  
+  .file-upload {
+    margin: 20px 0;
+  }
+  
+  .file-upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent1);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .file-upload-label:hover {
+    background-color: #0056b3;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .filebutton{
+    display: block;
+    width:100%;
+    text-align: left;
+    
+  
+  }

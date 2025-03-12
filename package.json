@@ -1,0 +1,48 @@
+{
+  "name": "imd-editor",
+  "version": "1.0.0",
+  "description": "A tool to edit .imd files and content",
+  "author": {
+    "name": "Iain Wood",
+    "email": "iain.wood@open.ac.uk"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host --port 3000 --open --mode development",
+    "start": "npm run dev",
+    "build": "vite build --mode production",
+    "docs": "vite build --outDir docs",
+    "postbuild": "npm run zip",
+    "preview": "vite preview --port 8080 --open",
+    "zip": "mkdirp ./release && build-metadata && npm run removetestdata && cd ./dist &&  bestzip ../release/imd-editor.zip *",
+    "removetestdata": "rimraf --glob dist/_testData/",
+    "lint": "eslint .",
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "prettier:fix": "prettier --write src/",
+    "lint:fix": "eslint --fix src/"
+  },
+  "dependencies": {
+    "@awesome.me/kit-4b5ffe0e68": "latest",
+    "@ou-imdt/css": "^3.0.0",
+    "@ou-imdt/utils": "^0.3.0",
+    "highlight.js": "11.8.0",
+    "jszip": "^3.10.1",
+    "pinia": "^2.3.0",
+    "simple-code-editor": "^2.0.9",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.16.0",
+    "@ou-imdt/build-metadata": "^1.0.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.13.0",
+    "prettier": "^3.4.2",
+    "vite": "^6.0.2",
+    "vite-plugin-pwa": "^0.21.1"
+  }
+}
