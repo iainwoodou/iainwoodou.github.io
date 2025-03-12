@@ -19,8 +19,13 @@ export default {
 
 <template>
   <div class="container">
+    <img 
+      :src="`icons/192.png`" 
+      alt="logo" 
+      style="width: 100px">
     <h1>IMD File Manager</h1>
     <h2>Upload .imd file</h2>
+
     <div class="file-upload">
       <label for="file-input" class="file-upload-label">
         <span>Choose a file</span>

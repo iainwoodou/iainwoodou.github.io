@@ -14,6 +14,9 @@ export default defineConfig({
         compilerOptions: {
           isCustomElement: (tag) => {
             tag.startsWith('imdt-')
+          },
+          transformAssetUrls: {
+            includeAbsolute: false
           }
         }
       }
