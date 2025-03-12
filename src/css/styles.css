@@ -10,8 +10,7 @@
 /* importing icons via js (optional addition)- Uncomment when icons are required */
 /* @import url('imd-icons'); */
 /* @import url('imd-icons/icons/css/all.css'); */
-@import url('@awesome.me/kit-4b5ffe0e68');
-@import url('@awesome.me/kit-4b5ffe0e68/icons/css/all.css');
+
 .container {
     max-width: 960px;
     margin: 0 auto;
