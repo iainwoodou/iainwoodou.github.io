@@ -23,6 +23,10 @@ export default {
 
 <template>
   <div class="container">
+    <h1>Css Editor</h1>
+    <p>Ok this is a CL thing, we have been including an overrides.css to allow the IMD to provide custom Css
+      This prob needs to be under an "Advances" tab or something
+    </p>
     <CodeEditor
       v-model="store.zipfiles['overrides.css'].data"
       theme="github-dark"

@@ -35,6 +35,10 @@ export default {
 <template>
   <div class="container">
     <h1>Images</h1>
+    <p>Ive added the ability to upload any file to the zip - we probably want to do an image only one and a files one
+Have a go  - this drops anything uploaded intp the images folder in the zip.
+
+    </p>
     <input type="file" @change="handleFileUpload" />
 
     <pre>

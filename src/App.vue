@@ -27,6 +27,7 @@ export default {
 
 <template>
   <UploadComponent v-if="!store.dataloaded" />
+  
   <div v-if="store.dataloaded" class="container">
     <button class="close" @click="store.dataloaded = null">Close</button>
     <button class="export" @click="exportIMDFile">Export .imd</button>
@@ -39,8 +40,6 @@ export default {
       <CssComponent v-if="section === 2" />
       <ImageComponent v-if="section === 3" />
     </div>
-
-
   </div>
   <InstallPopup />
 </template>
@@ -62,7 +61,7 @@ export default {
   margin: 0px;
 }
 .close {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #f44336;
@@ -72,7 +71,7 @@ export default {
   cursor: pointer;
 }
 .export {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   background-color: var(--accent1);

@@ -1,19 +1,10 @@
 <script>
 import { useGlobalStore } from '@/store/store.js';
 import FormElement from './FormComponents/FormElement.vue';
+
 export default {
   components: {
     FormElement
-  },
-  props: {
-    schema: {
-      type: Object,
-      required: true
-    },
-    model: {
-      type: Object,
-      required: true
-    }
   },
   setup() {
     const store = useGlobalStore();
@@ -23,16 +14,38 @@ export default {
   },
   data() {
     return {
+      model: {},
+      schema: {}
     };
   },
-  methods: {}
+  mounted() {
+    this.model = this.store.zipfiles['data.json'].data;
+    let schemafile = this.store.zipfiles['metadata.json'].data.schemafile;
+    this.schema = this.store.zipfiles[schemafile].data;
+
+  }
 };
 </script>
 
 <template>
- <pre>{{ schema }}</pre>
-
- <FormElement v-for="(value, key) in schema.properties" :key="key" :model="model[key]" :schema="value" />
+  <div>
+    <form>
+      <div v-for="(value, key) in schema.properties" :key="key">
+      <FormElement
+        :model="model"
+        :schema="value"
+        :name="key"
+      />
+    </div>
+    </form>
+  </div>
 </template>
 
-<style></style>
+<style>
+
+.inset{
+  border-left:10px solid var(--accent1);
+  padding:10px;
+  background-color: #0000000f;
+}
+</style>
